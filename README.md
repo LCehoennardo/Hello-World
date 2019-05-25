@@ -1,1 +1,1 @@
-#A place to record my learning.
+A place to record my learning.
