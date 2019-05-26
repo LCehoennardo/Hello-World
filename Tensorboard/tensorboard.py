@@ -67,8 +67,8 @@ for i in range(1000):
     sess.run(train_step, feed_dict={xs: x_data, ys: y_data})
     if i % 50 == 0:
         result = sess.run(merged,
-                          feed_dict={xs: x_data, ys: y_data})
-        writer.add_summary(result, i)
+                          feed_dict={xs: x_data, ys: y_data})#merged要run才能merge，每一次merge会将参数值、损失值都汇总到一起
+        writer.add_summary(result, i)#每merge一次，就把得到的值记录到文件里面，并备注上这是第几次的结果
 
 # direct to the local dir and run this in terminal:
 # $ tensorboard --logdir logs
